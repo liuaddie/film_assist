@@ -1,6 +1,10 @@
 # Film Assist
 Film Assist is a macOS application for film creators to handle routine works.
 
+## 📌 Latest Release
+- v0.0.1-nightly
+- https://github.com/liuaddie/film_assist/releases/download/v0.0.1-nightly/FilmAssist_v0.0.1.nightly.dmg
+
 ## ⚙️ Features
 - Convert Subtitle Files between SRT and Excel
 
