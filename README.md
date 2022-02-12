@@ -39,6 +39,12 @@ pip install --upgrade pip
 pip install -r requirements.txt
 ```
 
+#### Build macOS Standalone App
+Run pyinstaller
+```bash
+pyinstaller main.py -F -w -n 'Film Assist' -i icon.icns --add-data 'templates:templates' --add-data 'assets:assets'
+```
+
 ## 💻 Developing Environment
 #### System
 - macOS Big Sur 11.6
@@ -53,11 +59,13 @@ pip install -r requirements.txt
 - pyinstaller == 4.9  # https://pypi.org/project/pyinstaller/
 - Flask == 2.0.2 # https://pypi.org/project/Flask/
 - XlsxWriter == 3.0.2 # https://pypi.org/project/XlsxWriter/
-- srt == 3.5.1 # https://pypi.org/project/srt/
+- openpyxl == 3.0.9 # https://pypi.org/project/openpyxl/
+- pysrt==1.1.2 # https://pypi.org/project/pysrt/
 - timecode == 1.3.1 # https://pypi.org/project/timecode/
 
 #### Frontend
 - Bootstrap v5.1.3 (https://getbootstrap.com/)
+- Bootstrap Icons v1.8.0 (https://icons.getbootstrap.com/)
 
 ## ⚖️ License
 © 2022 Addie Liu (liuaddie@gmail.com)
