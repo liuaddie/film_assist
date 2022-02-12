@@ -1,6 +1,6 @@
 # Ignore Temp Folder/Files
 test/*
-assets/*
+assets/bootstrap/*
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
