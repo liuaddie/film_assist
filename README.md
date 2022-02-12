@@ -56,6 +56,9 @@ pip install -r requirements.txt
 - srt == 3.5.1 # https://pypi.org/project/srt/
 - timecode == 1.3.1 # https://pypi.org/project/timecode/
 
+#### Frontend
+- Bootstrap v5.1.3 (https://getbootstrap.com/)
+
 ## ⚖️ License
 © 2022 Addie Liu (liuaddie@gmail.com)
 

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <title>Film Assist</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap/css/bootstrap.min.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/ad_palette.css') }}">
+</head>
+
+<body style="background: var(--ad-app-bg); overflow-x:hidden;" class＝"shadow-none user-select-none">
+  <header style="min-height: 30px;" class="pywebview-drag-region">
+    <div class="row d-flex justify-content-md-start align-items-md-center app-header">
+      <div class="col">
+        <div class="mac-icon-gp" style="max-width: 75px;margin-left: 8px;margin-bottom: 4px;">
+          <span data-bs-target="#modal-quit-confirm" data-bs-toggle="modal">
+            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-x-circle-fill mac-icon" style="font-size: 16px;color: var(--mac-red);background: var(--mac-red);border-radius: 10px;">
+              <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z"></path>
+            </svg>
+          </span>
+          <span onclick="pywebview.api.minimize()">
+            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-dash-circle-fill mac-icon" style="font-size: 16px;color: var(--mac-yellow);background: var(--mac-yellow);border-radius: 10px;">
+              <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM4.5 7.5a.5.5 0 0 0 0 1h7a.5.5 0 0 0 0-1h-7z"></path>
+            </svg>
+          </span>
+          <span onclick="pywebview.api.enlarge()">
+            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-plus-circle-fill mac-icon" style="font-size: 16px;color: var(--mac-green);background: var(--mac-green);border-radius: 10px;">
+              <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v3h-3a.5.5 0 0 0 0 1h3v3a.5.5 0 0 0 1 0v-3h3a.5.5 0 0 0 0-1h-3v-3z"></path>
+            </svg>
+          </span>
+        </div>
+      </div>
+      <div class="col d-flex justify-content-md-start align-items-md-center">
+        <p class="m-auto" id="Tilte" style="color: var(--bs-gray-500);text-align: center;font-size: 16px;">Film Assist</p>
+      </div>
+      <div class="col"></div>
+    </div>
+  </header>
+  <main style="margin-top: 24px;margin-bottom: 24px;">
+    <div class="container">
+      <div class="row">
+        <div class="col d-flex justify-content-end align-items-center">
+          <button class="btn btn-primary" type="button" onclick="pywebview.api.import_srt()">Convert SRT to Excel</button>
+        </div>
+        <div class="col d-flex justify-content-start align-items-center">
+          <button class="btn btn-primary" type="button" onclick="pywebview.api.import_excel()">Convert Excel to SRT</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container font-monospace" style="margin-top: 20px;min-height: 200px;max-height: 600px;margin-bottom: 20px;margin-right: 20px;margin-left: 20px;text-align: left;color: var(--bs-light);font-size: 12px;">
+    <p>
+      {{ Message }}
+    </p>
+</div>
+</main>
+<footer class="fixed-bottom app-footer" style="min-height: 30px;height: 30px;">
+  <div class="row">
+    <div class="col"></div>
+    <div class="col">
+      <div class="d-flex justify-content-end" style="padding-right: 0px;">
+        <button class="btn btn-primary btn-sm" type="button" style="padding-right: 12px;border-radius: 0px;">
+          <svg class="bi bi-emoji-smile-upside-down" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16">
+            <path d="M8 1a7 7 0 1 0 0 14A7 7 0 0 0 8 1zm0-1a8 8 0 1 1 0 16A8 8 0 0 1 8 0z"></path>
+            <path d="M4.285 6.433a.5.5 0 0 0 .683-.183A3.498 3.498 0 0 1 8 4.5c1.295 0 2.426.703 3.032 1.75a.5.5 0 0 0 .866-.5A4.498 4.498 0 0 0 8 3.5a4.5 4.5 0 0 0-3.898 2.25.5.5 0 0 0 .183.683zM7 9.5C7 8.672 6.552 8 6 8s-1 .672-1 1.5.448 1.5 1 1.5 1-.672 1-1.5zm4 0c0-.828-.448-1.5-1-1.5s-1 .672-1 1.5.448 1.5 1 1.5 1-.672 1-1.5z"></path>
+          </svg>
+          0.0.1(nightly build)
+        </button>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!--- ########   BEGIN Modals   ######## -->
+<div class="modal fade" role="dialog" tabindex="-1" id="modal-quit-confirm">
+  <div class="modal-dialog modal-sm" role="document">
+    <div class="modal-content">
+      <div class="modal-body" style="background: var(--ad-app-bg);color: var(--bs-light);">
+        <p>Quit Film Assist?</p>
+      </div>
+      <div class="modal-footer border-0" style="background: var(--ad-app-border);padding: 5px;">
+        <button class="btn btn-primary btn-sm" type="button" data-bs-dismiss="modal">Stay</button>
+        <button class="btn btn-primary btn-sm" type="button" id="quit" onclick="pywebview.api.quit()">Quit</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!--- ########   END Modals   ######## -->
+
+<script src="{{ url_for('static', filename='bootstrap/js/bootstrap.min.js') }}"></script>
+
+</body>
+
+</html>
