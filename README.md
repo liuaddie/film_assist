@@ -2,6 +2,7 @@
 Film Assist is a macOS application for film creators to handle routine works.
 
 ## 📌 Latest Release
+![Film Assist v0.0.1-nightly - Screenshot](https://user-images.githubusercontent.com/4589580/219295877-23d7762c-df84-4d16-a0a3-16f0187b02df.png "Film Assist v0.0.1-nightly - Screenshot")
 - v0.0.1-nightly
 - https://github.com/liuaddie/film_assist/releases/download/v0.0.1-nightly/FilmAssist_v0.0.1.nightly.dmg
 
